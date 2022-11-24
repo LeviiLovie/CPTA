@@ -7,7 +7,8 @@ public class Main {
         frame.setSize(1280, 720 + 25);
         frame.setLocation(0, 0);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        frame.setLayout(null);
+//        frame.setLayout(null);
+        frame.add(new Window());
         frame.setVisible(true);
     }
 
