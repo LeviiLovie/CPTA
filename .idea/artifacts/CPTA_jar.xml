@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="CPTA:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/CPTA_jar</output-path>
+    <root id="archive" name="CPTA.jar">
+      <element id="module-output" name="CPTA" />
+    </root>
+  </artifact>
+</component>
