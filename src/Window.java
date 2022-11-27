@@ -14,12 +14,14 @@ public class Window extends JPanel {
     BufferedImage[] walls;
     BufferedImage floor;
     BufferedImage[] connectors;
+    BufferedImage[] conveyors;
 
     public Window() {
         appStatus = "game";
 
         walls = new BufferedImage[8];
         connectors = new BufferedImage[8];
+        conveyors = new BufferedImage[12];
         try {
             walls[0] = ImageIO.read(new File("source/walls/wall1.1.png"));
             walls[1] = ImageIO.read(new File("source/walls/wall1.2.png"));
@@ -42,6 +44,8 @@ public class Window extends JPanel {
             connectors[5] = ImageIO.read(new File("source/connectors/outputconvevoyer2.png"));
             connectors[6] = ImageIO.read(new File("source/connectors/outputconvevoyer1.png"));
             connectors[7] = ImageIO.read(new File("source/connectors/outputconvevoyer3.png"));
+
+            conveyors[0] = ImageIO.read(new File("source/conveyor/conveyor_tern1.png"));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -194,6 +198,13 @@ public class Window extends JPanel {
 //                    } else {
 //                        g2d.fillRect(x * 25, y * 25, 25, 25);
 //                    }
+                }
+            }
+            for (int y = 0; y < worldNow.world.length; y++) {
+                for (int x = 0; x < worldNow.world[y].length; x++) {
+                    if (worldNow.world[y][x] == 1) {
+                        g2d.drawImage(conveyors[0], (y * tileSize) + ((tileSize / 16) * 2), (x * tileSize) + ((tileSize / 16) * 2), tileSize, tileSize, null);
+                    }
                 }
             }
         }

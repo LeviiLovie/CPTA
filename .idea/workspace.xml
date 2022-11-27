@@ -8,11 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="339219f2-92b6-4d1b-93ff-d07a9cf41ab2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Untitled-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Untitled-1.psd" beforeDir="false" afterPath="$PROJECT_DIR$/source/Untitled-1.psd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Untitled-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/conveyor_tern1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/conveyor_tern2.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Window.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/World.java" afterDir="false" />
     </list>
@@ -51,11 +46,17 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/leo/Documents/GitHub/CPTA&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="dev" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Main" />

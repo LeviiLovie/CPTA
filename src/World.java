@@ -15,10 +15,10 @@ public class World {
         sizeEY = sizeY + 1;
 
         inPutConveyorData = new int[][] {
-                {2, sizeEY}, {7, 0}, {0, 5}, {sizeEX, 2}
+                {1, sizeEY}, {2, 0}, {0, 3}, {sizeEX, 4}
         };
         outPutConveyorData = new int[][] {
-                {9, sizeEY}, {4, 0}, {0, 1}, {sizeEX, 7}
+                {5, sizeEY}, {6, 0}, {0, 7}, {sizeEX, 8}
         };
 
         world = new int[sizeY][sizeX];
@@ -27,5 +27,6 @@ public class World {
                 world[y][x] = 0;
             }
         }
+        world[3][3] = 1;
     }
 }
