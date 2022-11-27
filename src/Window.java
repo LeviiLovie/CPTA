@@ -27,7 +27,6 @@ public class Window extends JPanel {
             walls[1] = ImageIO.read(new File("source/walls/wall1.2.png"));
             walls[2] = ImageIO.read(new File("source/walls/wall1.3.png"));
             walls[3] = ImageIO.read(new File("source/walls/wall1.4.png"));
-
             walls[4] = ImageIO.read(new File("source/walls/wall2.1.png"));
             walls[5] = ImageIO.read(new File("source/walls/wall2.2.png"));
             walls[6] = ImageIO.read(new File("source/walls/wall2.3.png"));
@@ -39,13 +38,23 @@ public class Window extends JPanel {
             connectors[1] = ImageIO.read(new File("source/connectors/inputconvevoyer2.png"));
             connectors[2] = ImageIO.read(new File("source/connectors/inputconvevoyer3.png"));
             connectors[3] = ImageIO.read(new File("source/connectors/inputconvevoyer4.png"));
-
             connectors[4] = ImageIO.read(new File("source/connectors/outputconvevoyer4.png"));
             connectors[5] = ImageIO.read(new File("source/connectors/outputconvevoyer2.png"));
             connectors[6] = ImageIO.read(new File("source/connectors/outputconvevoyer1.png"));
             connectors[7] = ImageIO.read(new File("source/connectors/outputconvevoyer3.png"));
 
-            conveyors[0] = ImageIO.read(new File("source/conveyor/conveyor_tern1.png"));
+            conveyors[0] = ImageIO.read(new File("source/conveyor/straight1.png"));
+            conveyors[1] = ImageIO.read(new File("source/conveyor/straight2.png"));
+            conveyors[2] = ImageIO.read(new File("source/conveyor/straight3.png"));
+            conveyors[3] = ImageIO.read(new File("source/conveyor/straight4.png"));
+            conveyors[4] = ImageIO.read(new File("source/conveyor/ungle1.png"));
+            conveyors[5] = ImageIO.read(new File("source/conveyor/ungle2.png"));
+            conveyors[6] = ImageIO.read(new File("source/conveyor/ungle3.png"));
+            conveyors[7] = ImageIO.read(new File("source/conveyor/ungle4.png"));
+            conveyors[8] = ImageIO.read(new File("source/conveyor/ungle5.png"));
+            conveyors[9] = ImageIO.read(new File("source/conveyor/ungle6.png"));
+            conveyors[10] = ImageIO.read(new File("source/conveyor/ungle7.png"));
+            conveyors[11] = ImageIO.read(new File("source/conveyor/ungle8.png"));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -143,67 +152,36 @@ public class Window extends JPanel {
                             g2d.drawImage(connectors[7], worldNow.outPutConveyorData[i][0] * tileSize, worldNow.outPutConveyorData[i][1] * tileSize, tileSize, tileSize, null);
                         }
                     }
-//                    g2d.drawImage(
-//                            inPutConveyor,
-//                            worldNow.inPutConveyorData[0] * tileSize,
-//                            worldNow.inPutConveyorData[1] * tileSize,
-//                            tileSize,
-//                            tileSize,
-//                            null
-//                    );
-//                    g2d.drawImage(
-//                            outPutConveyor,
-//                            worldNow.outPutConveyorData[0] * tileSize,
-//                            worldNow.outPutConveyorData[1] * tileSize,
-//                            tileSize,
-//                            tileSize,
-//                            null
-//                    );
-
-//                    if (y == 0 && (x != 0 && x != worldNow.sizeY)) {
-//                        g2d.drawImage(walls[0], x * 32, y * 32, 32, 32, null);
-//                    } else if (y == worldNow.sizeY && (x != 0 && x != worldNow.sizeY)) {
-//                        g2d.drawImage(walls[2], x * 32, y * 32, 32, 32, null);
-//                    } else if (x == 0 && (y != 0 && y != worldNow.sizeY)) {
-//                        g2d.drawImage(walls[1], x * 32, y * 32, 32, 32, null);
-//                    } else if (x == worldNow.sizeX && (y != 0 && y != worldNow.sizeY)) {
-//                        g2d.drawImage(walls[1], x * 32, y * 32, 32, 32, null);
-//                    }
-//                    System.out.println(worldNow.sizeY + " - " + y + " | " + worldNow.sizeX + " - " + x);
-
-//                    else if (x == (worldNow.sizeEX - 1) && (y != 0 && y != worldNow.sizeEY)) {
-//                        g2d.drawImage(walls[2], y * 32, (x + 1) * 32, 32, 32, null);
-//                    } else if (y == 0 && (x != 0 && x != worldNow.sizeEY)) {
-//                        g2d.drawImage(walls[3], y * 32, x * 32, 32, 32, null);
-////                    } else if (y == worldNow.sizeEY && (x != 0 && x != worldNow.sizeEX)) {
-//                    } else if (y == (worldNow.sizeEY - 1)) {
-//                        g2d.drawImage(walls[1], (y + 1) * 32, x * 32, 32, 32, null);
-//                    }
-//                    } else if (x == worldNow.sizeEX && (x != 0 && x != worldNow.sizeEY)) {
-//                        System.out.println(x + " | " + y + " - " + "x");
-//                        g2d.drawImage(walls[2], x * 32, y * 32, 32, 32, null);
-//                    } else if (y == 0 && (x != 0 && x != worldNow.sizeEY)) {
-//                        System.out.println(x + " | " + y + " - " + "4");
-//                        g2d.drawImage(walls[4], x * 32, y * 32, 32, 32, null);
-//                    } else if (y == worldNow.sizeEY && (x != 0 && x != worldNow.sizeEY)) {
-//                        System.out.println(x + " | " + y + " - " + "1");
-//                        g2d.drawImage(walls[1], x * 32, y * 32, 32, 32, null);
-//                    }
-//                    if (x == 0 && (y != 0 && y != worldNow.sizeX)) {
-//                        g2d.drawImage(walls[0], y * 25, x * 25, 32, 32, null);
-//                    } if (y == 0 && (x != 0 && y != worldNow.sizeX)) {
-//                        g2d.drawImage(walls[0], y * 25, x * 25, 32, 32, null);
-//                    } else if (y != 0 || y != worldNow.sizeY + 1 || x != 0 || x != worldNow.sizeX + 1) {
-//                        g2d.setColor(Color.BLUE);
-//                    } else {
-//                        g2d.fillRect(x * 25, y * 25, 25, 25);
-//                    }
                 }
             }
             for (int y = 0; y < worldNow.world.length; y++) {
                 for (int x = 0; x < worldNow.world[y].length; x++) {
-                    if (worldNow.world[y][x] == 1) {
-                        g2d.drawImage(conveyors[0], (y * tileSize) + ((tileSize / 16) * 2), (x * tileSize) + ((tileSize / 16) * 2), tileSize, tileSize, null);
+                    int posX = tileSize + (x * tileSize);
+                    int posY = tileSize + (y * tileSize);
+                    if (worldNow.world[y][x] == 1.1f) {
+                        g2d.drawImage(conveyors[0], posX, posY, tileSize, tileSize, null);
+                    } else if (worldNow.world[y][x] == 1.2f) {
+                        g2d.drawImage(conveyors[1], posX, posY, tileSize, tileSize, null);
+                    } else if (worldNow.world[y][x] == 1.3f) {
+                        g2d.drawImage(conveyors[2], posX, posY, tileSize, tileSize, null);
+                    } else if (worldNow.world[y][x] == 1.4f) {
+                        g2d.drawImage(conveyors[3], posX, posY, tileSize, tileSize, null);
+                    } else if (worldNow.world[y][x] == 2.1f) {
+                        g2d.drawImage(conveyors[4], posX, posY, tileSize, tileSize, null);
+                    } else if (worldNow.world[y][x] == 2.2f) {
+                        g2d.drawImage(conveyors[5], posX, posY, tileSize, tileSize, null);
+                    } else if (worldNow.world[y][x] == 2.3f) {
+                        g2d.drawImage(conveyors[6], posX, posY, tileSize, tileSize, null);
+                    } else if (worldNow.world[y][x] == 2.4f) {
+                        g2d.drawImage(conveyors[7], posX, posY, tileSize, tileSize, null);
+                    } else if (worldNow.world[y][x] == 2.5f) {
+                        g2d.drawImage(conveyors[8], posX, posY, tileSize, tileSize, null);
+                    } else if (worldNow.world[y][x] == 2.6f) {
+                        g2d.drawImage(conveyors[9], posX, posY, tileSize, tileSize, null);
+                    } else if (worldNow.world[y][x] == 2.7f) {
+                        g2d.drawImage(conveyors[10], posX, posY, tileSize, tileSize, null);
+                    } else if (worldNow.world[y][x] == 2.8f) {
+                        g2d.drawImage(conveyors[11], posX, posY, tileSize, tileSize, null);
                     }
                 }
             }
