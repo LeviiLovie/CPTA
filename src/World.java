@@ -7,6 +7,7 @@ public class World {
     public int[][] outPutConveyorData;
 
     public float[][] world;
+    public conveyor[][] conveyors;
 
     public World(int inPutSizeX, int inPutSizeY) {
         sizeX = inPutSizeX;
@@ -21,12 +22,16 @@ public class World {
                 {5, sizeEY}, {6, 0}, {0, 7}, {sizeEX, 8}
         };
 
+//        conveyor = new conveyor[][];
+
         world = new float[sizeY][sizeX];
         for (int y = 0; y < sizeY; y++) {
             for (int x = 0; x < sizeY; x++) {
                 world[y][x] = 0f;
             }
         }
+
+
         world[0][0] = 1.1f;
         world[0][1] = 1.2f;
         world[0][2] = 1.3f;
@@ -49,5 +54,15 @@ public class World {
         world[4][5] = 2.4f;
         world[5][4] = 2.2f;
         world[5][5] = 2.1f;
+    }
+}
+
+class conveyor {
+    public int x;
+    public int y;
+
+    public conveyor(int posX, int posY) {
+        x = posX;
+        y = posY;
     }
 }
